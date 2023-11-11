@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './loginpage.css';
+import './LoginPage.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -43,7 +43,7 @@ const LoginPage = (props) => {
 
       const success = await register(email, password);
       if (success) {
-        navigate(previousPage || '/');
+        navigate(previousPage || '../');
         setLoggedIn(true);
       } else {
         setError('Registration failed!');

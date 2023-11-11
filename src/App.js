@@ -3,8 +3,9 @@ import './App.css';
 import LoginPage from "./pages/LoginPage/LoginPage";
 import MainPage from "./pages/MainPage/MainPage";
 import MenuPage from "./pages/MenuPage/MenuPage";
-import NavBar from "./common/NavBar/NavBar";
-import BasketPage from './pages/BasketPage/Basketpage';
+import NavBar from "./components/NavBar/NavBar";
+import {BasketPage} from './pages';
+import MainNavigation from './navigation/MainNavigation';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('main');
@@ -27,10 +28,11 @@ function App() {
       ) : (
         <div>
           <NavBar changePage={changePage} toggleLogin={toggleLogin} />
-          {currentPage === 'login' && <LoginPage formType='login' />}
+          {/* {currentPage === 'login' && <LoginPage formType='login' />}
           {currentPage === 'main' && <MainPage changePage={changePage} toggleLogin={toggleLogin} />}
           {currentPage === 'menu' && <MenuPage changePage={changePage} toggleLogin={toggleLogin} />}
-          {currentPage === 'basket' && <BasketPage changePage={changePage} toggleLogin={toggleLogin} />}
+          {currentPage === 'basket' && <BasketPage changePage={changePage} toggleLogin={toggleLogin} />} */}
+          <MainNavigation />
         </div>
       )}
     </div>
