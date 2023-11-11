@@ -8,13 +8,8 @@ import {BasketPage} from './pages';
 import MainNavigation from './navigation/MainNavigation';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('main');
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [loginType, setLoginType] = useState('register');
-
-  const changePage = (page) => {
-    setCurrentPage(page);
-  }
 
   const toggleLogin = (type) => {
     setIsLoginOpen(!isLoginOpen);
@@ -23,18 +18,8 @@ function App() {
 
   return (
     <div>
-      {isLoginOpen ? (
-        <LoginPage formType={loginType} previousPage={currentPage} />
-      ) : (
-        <div>
-          <NavBar changePage={changePage} toggleLogin={toggleLogin} />
-          {/* {currentPage === 'login' && <LoginPage formType='login' />}
-          {currentPage === 'main' && <MainPage changePage={changePage} toggleLogin={toggleLogin} />}
-          {currentPage === 'menu' && <MenuPage changePage={changePage} toggleLogin={toggleLogin} />}
-          {currentPage === 'basket' && <BasketPage changePage={changePage} toggleLogin={toggleLogin} />} */}
-          <MainNavigation />
-        </div>
-      )}
+      <NavBar toggleLogin={toggleLogin} />
+      <MainNavigation />
     </div>
   );
 }

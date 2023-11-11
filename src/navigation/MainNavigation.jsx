@@ -1,9 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import PATHS from '../constants/paths';
-import { BasketPage, LoginPage, MainPage, MenuPage } from '../pages';
-import SignInPage from '../pages/SignInPage/SignInPage';
-import SignUpPage from '../pages/SignUpPage/SignUpPage';
+import { BasketPage, MainPage, MenuPage, SignInPage, SignUpPage } from '../pages';
 
 const MainNavigation = () => {
     return (

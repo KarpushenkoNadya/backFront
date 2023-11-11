@@ -5,7 +5,7 @@ import mainLogo from '../../assets/newlogo10.png';
 import { Link, useNavigate } from 'react-router-dom';
 import PATHS from '../../constants/paths';
 
-const NavBar = ({ changePage, toggleLogin }) => {
+const NavBar = ({toggleLogin }) => {
   const navigate = useNavigate();
   const scrollPosition = useScrollPosition();
 
