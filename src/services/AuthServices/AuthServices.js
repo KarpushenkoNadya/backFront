@@ -14,7 +14,7 @@ const AuthServices = {
     },
     login: async (email, password) => {
         try {
-          const response = await axios.post('http://localhost:7000/api/login', { email, password });
+          const response = await axios.post('http://localhost:7000/api/user/login', { email, password });
           const token = response.data.token;
           return token; // Modified: Now login function directly returns the token
         } catch (error) {
