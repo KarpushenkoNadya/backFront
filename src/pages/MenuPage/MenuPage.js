@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './menupage.css';
+import './MenuPage.css';
 
 const MenuPage = () => {
   const [menuItems, setMenuItems] = useState([]);

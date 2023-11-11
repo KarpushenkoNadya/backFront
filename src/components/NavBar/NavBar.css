@@ -53,11 +53,16 @@
   margin-left: 40px;
 }
 
-li {
+.navbar-menu-list > li > a {
   cursor: pointer;
+  text-decoration: none;
+  transition: .2s;
 }
 
-li:hover {
+.navbar-menu-list > li > a:visited {
+  color: #FFFFFF;
+}
+.navbar-menu-list > li > a:hover {
   color: #444444;
 }
 

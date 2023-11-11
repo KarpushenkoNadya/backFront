@@ -1,5 +1,5 @@
 import React from 'react';
-import './basketpage.css';
+import './BasketPage.css';
 
 const BasketPage = () => {
   return (

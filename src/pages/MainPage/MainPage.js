@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  // Импортируйте Link из react-router-dom
-import './mainpage.css';
+import './MainPage.css';
 import dayMeal from '../../assets/daymeal.JPG';
+import PATHS from '../../constants/paths';
 
 const MainPage = () => {
   return (
@@ -15,7 +16,7 @@ const MainPage = () => {
           </span>
         </div>
       </div>
-      <Link to="/menu"> {/* Используйте Link вместо обычной кнопки */}
+      <Link to={PATHS.menu}> {/* Используйте Link вместо обычной кнопки */}
         <button className='btn-1 try-btn'>TRY NOW</button>
       </Link>
     </div>
