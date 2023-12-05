@@ -23,7 +23,7 @@ const MenuPage = () => {
         <ul>
           {menuItems.map(item => (
             <li key={item.id}>
-              <img src={`путь/к/изображениям/${item.img}`} alt={item.name} />
+              <img src={`http://localhost:7000/static/${item.img}`} alt={item.name} />
               <div>
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
