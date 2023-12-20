@@ -1,19 +1,23 @@
-import React from 'react';
-import './NavBar.css';
+import React from "react";
+import "./NavBar.css";
 import useScrollPosition from "../../hooks/useScrollPosition";
-import mainLogo from '../../assets/newlogo10.png';
-import { Link, useNavigate } from 'react-router-dom';
-import PATHS from '../../constants/paths';
+import mainLogo from "../../assets/newlogo10.png";
+import { Link, useNavigate } from "react-router-dom";
+import PATHS from "../../constants/paths";
 
-const NavBar = ({toggleLogin }) => {
+const NavBar = ({ toggleLogin }) => {
   const navigate = useNavigate();
   const scrollPosition = useScrollPosition();
 
   return (
-    <div className={scrollPosition > 0 ? 'navbar-container-scrolled' : 'navbar-container'}>
-      <img className='navbar-logo' src={mainLogo} alt="logo" />
-      <div className='navbar-menu-container'>
-        <ul className='navbar-menu-list'>
+    <div
+      className={
+        scrollPosition > 0 ? "navbar-container-scrolled" : "navbar-container"
+      }
+    >
+      <img className="navbar-logo" src={mainLogo} alt="logo" />
+      <div className="navbar-menu-container">
+        <ul className="navbar-menu-list">
           <li>
             <Link to={PATHS.home}>HOME</Link>
           </li>
@@ -25,9 +29,13 @@ const NavBar = ({toggleLogin }) => {
           </li>
         </ul>
       </div>
-      <div className='navbar-button-container'>
-        <button className='btn-1' onClick={() => navigate(PATHS.signUp)}>Sign Up</button>
-        <button className='btn-1' onClick={() => navigate(PATHS.signIn)}>Sign In</button>
+      <div className="navbar-button-container">
+        <button className="btn-1" onClick={() => navigate(PATHS.signUp)}>
+          Sign Up
+        </button>
+        <button className="btn-1" onClick={() => navigate(PATHS.signIn)}>
+          Sign In
+        </button>
       </div>
     </div>
   );
